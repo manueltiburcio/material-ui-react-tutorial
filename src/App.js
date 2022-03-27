@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import SaveIcon from '@material-ui/icons/Save';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Checkbox from '@material-ui/core/Checkbox';
+
+function CheckboxExample() {
+  const [checked, setChecked] = useState(false);
+
+  return <Checkbox checked={checked}></Checkbox>;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <h2>Hello??</h2>
+      <CheckboxExample></CheckboxExample>
+      <ButtonGroup variant="contained" color="primary">
+        <Button startIcon={<SaveIcon />} size="large" href="#">
+          Save
+        </Button>
+        <Button
+          startIcon={<DeleteIcon />}
+          size="large"
+          href="#"
+          variant="contained"
         >
-          Learn React
-        </a>
-      </header>
+          Discard
+        </Button>
+      </ButtonGroup>
     </div>
   );
 }
