@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <h2>Hello??</h2>
-      <CheckboxExample></CheckboxExample>
+      <CheckboxExample on></CheckboxExample>
       <ButtonGroup variant="contained" color="primary">
         <Button startIcon={<SaveIcon />} size="large" href="#">
           Save
